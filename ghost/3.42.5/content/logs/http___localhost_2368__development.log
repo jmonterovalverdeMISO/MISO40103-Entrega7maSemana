@@ -1,0 +1,48 @@
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: posts","time":"2021-05-15T01:51:24.421Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: posts_meta","time":"2021-05-15T01:51:24.432Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: users","time":"2021-05-15T01:51:24.440Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: posts_authors","time":"2021-05-15T01:51:24.482Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: roles","time":"2021-05-15T01:51:24.491Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: roles_users","time":"2021-05-15T01:51:24.500Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: permissions","time":"2021-05-15T01:51:24.503Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: permissions_users","time":"2021-05-15T01:51:24.508Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: permissions_roles","time":"2021-05-15T01:51:24.511Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: permissions_apps","time":"2021-05-15T01:51:24.513Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: settings","time":"2021-05-15T01:51:24.516Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: tags","time":"2021-05-15T01:51:24.521Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: posts_tags","time":"2021-05-15T01:51:24.525Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: apps","time":"2021-05-15T01:51:24.528Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: app_settings","time":"2021-05-15T01:51:24.535Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: app_fields","time":"2021-05-15T01:51:24.539Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: invites","time":"2021-05-15T01:51:24.542Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: brute","time":"2021-05-15T01:51:24.548Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: webhooks","time":"2021-05-15T01:51:24.551Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: sessions","time":"2021-05-15T01:51:24.553Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: integrations","time":"2021-05-15T01:51:24.558Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: api_keys","time":"2021-05-15T01:51:24.563Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: mobiledoc_revisions","time":"2021-05-15T01:51:24.568Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: members","time":"2021-05-15T01:51:24.572Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: labels","time":"2021-05-15T01:51:24.581Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: members_labels","time":"2021-05-15T01:51:24.587Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: members_stripe_customers","time":"2021-05-15T01:51:24.590Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: members_stripe_customers_subscriptions","time":"2021-05-15T01:51:24.594Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: actions","time":"2021-05-15T01:51:24.599Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: emails","time":"2021-05-15T01:51:24.601Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: email_batches","time":"2021-05-15T01:51:24.608Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: email_recipients","time":"2021-05-15T01:51:24.610Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: tokens","time":"2021-05-15T01:51:24.625Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Creating table: snippets","time":"2021-05-15T01:51:24.629Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Model: Tag","time":"2021-05-15T01:51:24.636Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Model: Role","time":"2021-05-15T01:51:24.647Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Model: Permission","time":"2021-05-15T01:51:24.659Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Model: User","time":"2021-05-15T01:51:24.777Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Model: Post","time":"2021-05-15T01:51:25.479Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Model: Integration","time":"2021-05-15T01:51:25.599Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Relation: Role to Permission","time":"2021-05-15T01:51:25.617Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Relation: Post to Tag","time":"2021-05-15T01:51:25.757Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Relation: User to Role","time":"2021-05-15T01:51:25.773Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Ghost is running in development...","time":"2021-05-15T01:51:27.196Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Listening on: 127.0.0.1:2368","time":"2021-05-15T01:51:27.196Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Url configured as: http://localhost:2368/","time":"2021-05-15T01:51:27.197Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Ctrl+C to shut down","time":"2021-05-15T01:51:27.197Z","v":0}
+{"name":"Log","hostname":"pop-os","pid":139529,"level":30,"msg":"Ghost boot 3.882s","time":"2021-05-15T01:51:27.198Z","v":0}

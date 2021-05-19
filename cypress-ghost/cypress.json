@@ -1,0 +1,10 @@
+{
+    "testFiles": "**/*.spec.*",
+    "chromeWebSecurity":  false,
+    "redirectionLimit": 100,
+    "video": false,
+    "trashAssetsBeforeRuns": true,
+    "screenshotOnRunFailure": false,
+    "capture": "fullPage",
+    "scale": true
+}

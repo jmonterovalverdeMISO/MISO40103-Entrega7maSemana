@@ -1,0 +1,13 @@
+node_modules
+cypress-ghost/cypress/videos/**/*
+cypress-ghost/cypress/screenshots/**/*
+kraken-ghost/reports/**/*
+ghost/content/logs/*
+kraken-ghost/.device_directory
+kraken-ghost/.devices_ready_to_start
+kraken-ghost/*_inbox.txt
+vrt-results/report/*
+vrt-code/.vs/VRT-4103/v16/.suo
+
+# exception to the rule
+!vrt-results/report/README.md

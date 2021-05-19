@@ -1,0 +1,12 @@
+FROM ghost:3.42.5
+
+LABEL Name=ghost-test Version=3.42.5
+
+COPY ./ghost/3.42.5/content /var/lib/ghost/content
+
+RUN apt-get update && \
+    apt-get install iputils-ping -y
+
+EXPOSE 3002
+
+CMD node current/index.js
