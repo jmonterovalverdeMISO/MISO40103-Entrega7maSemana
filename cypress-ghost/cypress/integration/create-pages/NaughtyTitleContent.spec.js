@@ -2,10 +2,9 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
+import CreatePageAprioriData from "../data-pool/a-priori-page-data";
 
-const pagesList = require("../../fixtures/Mokaroo-Page-NaughtyContent.json");
-
-pagesList.forEach((page) => {
+CreatePageAprioriData.getPageNaughtyContentData().forEach((page) => {
   context("Create draft page with Text in the title that may break the page #" + page.id, () => {
     before(() => {
       cy.login();

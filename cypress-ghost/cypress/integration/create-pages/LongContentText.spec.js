@@ -2,10 +2,9 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
+import CreatePageAprioriData from "../data-pool/a-priori-page-data";
 
-const pagesList = require("../../fixtures/Mokaroo-Page-LongContentText.json");
-
-pagesList.forEach((page) => {
+CreatePageAprioriData.getPageLongContentTextData().forEach((page) => {
   context("Create draft page with Long Content #" + page.id, () => {
     before(() => {
       cy.login();
@@ -46,8 +45,8 @@ pagesList.forEach((page) => {
     it("should fill inputs and update information page", () => {
       PagesListPage.getLastDraftPageTitle().click({ force: true });
 
-      PagesPage.getTitleField().clear().type(page.title);
-      PagesPage.getContentField().type(page.content);
+      PagesPage.getTitleField().clear().type(page.title, { parseSpecialCharSequences: false });
+      PagesPage.getContentField().type(page.content, { parseSpecialCharSequences: false });
 
       PagesPage.getBackToPagesPageButton().click();
       PagesListPage.getLastDraftPageTitle().should(
