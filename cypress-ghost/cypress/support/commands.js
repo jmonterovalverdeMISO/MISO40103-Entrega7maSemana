@@ -8,7 +8,7 @@ Cypress.Commands.add('login', () => {
   Cypress.config('baseUrl', Cypress.env('GHOST_3_42_5'))
 
   cy.visit('/ghost/#/signin')
-  cy.wait(3000);
+  cy.wait(5000);
   LoginPage.getUserNameField().type(user)
   LoginPage.getPasswordField().type(password)
   LoginPage.getSignInButon().click()

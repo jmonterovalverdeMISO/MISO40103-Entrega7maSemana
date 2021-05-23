@@ -35,7 +35,7 @@ CreatePageAprioriData.getPageLongContentTextData().forEach((page) => {
     it("should create an untitled draft page when no information is provided", () => {
       PagesPage.getTitleField().click();
       PagesPage.getBackToPagesPageButton().click();
-
+      cy.wait(3000);
       PagesListPage.getLastDraftPageTitle().should(
         "contain.text",
         "(Untitled)"
@@ -49,6 +49,7 @@ CreatePageAprioriData.getPageLongContentTextData().forEach((page) => {
       PagesPage.getContentField().type(page.content, { parseSpecialCharSequences: false });
 
       PagesPage.getBackToPagesPageButton().click();
+      cy.wait(3000);
       PagesListPage.getLastDraftPageTitle().should(
         "contain.text",
         page.title

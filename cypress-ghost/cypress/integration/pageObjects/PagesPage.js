@@ -14,7 +14,7 @@ class PagesPage {
   }
 
   static getHeaderStatusLabel() {
-    return cy.get(".gh-editor-header span");
+    return cy.get(".gh-editor-header span").first();
   }
 
   static getHeaderStatusLabelForScheduledPages() {

@@ -47,7 +47,7 @@ CreatePageAprioriData.getPageNaughtyTitleData().forEach((page) => {
 
       PagesPage.getTitleField().clear().type(page.title, { parseSpecialCharSequences: false });
       PagesPage.getContentField().type(page.content, { parseSpecialCharSequences: false });
-
+      
       PagesPage.getBackToPagesPageButton().click();
       PagesListPage.getLastDraftPageTitle().should(
         "contain.text",
