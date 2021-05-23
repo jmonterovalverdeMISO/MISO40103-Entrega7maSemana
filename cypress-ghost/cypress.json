@@ -2,6 +2,7 @@
     "testFiles": "**/*.spec.*",
     "chromeWebSecurity":  false,
     "redirectionLimit": 100,
+    "defaultCommandTimeout": 10000,
     "video": false,
     "trashAssetsBeforeRuns": true,
     "screenshotOnRunFailure": false,

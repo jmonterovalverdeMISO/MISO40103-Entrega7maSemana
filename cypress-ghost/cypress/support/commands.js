@@ -8,11 +8,16 @@ Cypress.Commands.add('login', () => {
 
   cy.visit('/ghost/#/signin')
   cy.wait(5000);
-  LoginPage.getUserNameField().type(user)
-  LoginPage.getPasswordField().type(password)
-  LoginPage.getSignInButon().click()
 
-  cy.wait(500)
+  cy.url().then((url) => {
+    if (url.includes('/ghost/#/signin')) {
+      LoginPage.getUserNameField().type(user)
+      LoginPage.getPasswordField().type(password)
+      LoginPage.getSignInButon().click()
+    
+      cy.wait(500)
+    }
+  });
 })
 
 Cypress.Commands.add('logout', () => {

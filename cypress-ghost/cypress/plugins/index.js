@@ -29,7 +29,7 @@ const SCHEMAS = [
 module.exports = (on, config) => {
     on('before:run', () => {
         return Promise.all(SCHEMAS.map(async (schema) => {
-            const response = await mockaroo.generateFromSchema(schema, 10);
+            const response = await mockaroo.generateFromSchema(schema, 25);
     
             const poolPath = `./cypress/data-pool/dynamic/schemas/${schema}.json`;
             const poolFile = fs.existsSync(poolPath);

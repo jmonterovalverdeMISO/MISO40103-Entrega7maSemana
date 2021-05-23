@@ -7,7 +7,7 @@ class DataPool {
     this.pools = {
       apriori: new AprioriPool(),
       random: new RandomPool(),
-      dinamyc: new DynamicPool()
+      dynamic: new DynamicPool()
     };
   }
 
