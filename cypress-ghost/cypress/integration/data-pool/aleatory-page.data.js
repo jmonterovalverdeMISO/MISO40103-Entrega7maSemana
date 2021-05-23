@@ -7,7 +7,6 @@ class CreatePageAleatoryBoundariesData {
   static getBoundariesTestData() {
     let pagesList = [];
     faker.seed(0);
-    console.log(faker);
 
     //Title
     const titleMinValuePage = {
@@ -20,14 +19,14 @@ class CreatePageAleatoryBoundariesData {
     //Title
     const titlebelowMinValuePage = {
       scenarioName: "Title below minimum (empty)",
-      title: "",
+      title: " ",
       content: faker.random.alphaNumeric(100),
     };
     pagesList.push(titlebelowMinValuePage);
 
     //Title
     const titlemaxValuePage = {
-      scenarioName: "Title at maximum allowed",
+      scenarioName: "Title at maximum allowed in DB (2000)",
       title: faker.random.alphaNumeric(2000),
       content: faker.random.alphaNumeric(100),
     };
@@ -35,11 +34,27 @@ class CreatePageAleatoryBoundariesData {
 
     //Title
     const titleAboveMaxValuePage = {
-      scenarioName: "Title above maximum allowed (max + 1)",
+      scenarioName: "Title above maximum allowed in DB (2000 + 1)",
       title: faker.random.alphaNumeric(2001),
       content: faker.random.alphaNumeric(100),
     };
     pagesList.push(titleAboveMaxValuePage);
+
+    //Title
+    const titlemaxValuePage2 = {
+      scenarioName: "Title at maximum allowed in UI (255)",
+      title: faker.random.alphaNumeric(255),
+      content: faker.random.alphaNumeric(100),
+    };
+    pagesList.push(titlemaxValuePage2);
+
+    //Title
+    const titleAboveMaxValuePage2 = {
+      scenarioName: "Title above maximum allowed in UI (255 + 1)",
+      title: faker.random.alphaNumeric(256),
+      content: faker.random.alphaNumeric(100),
+    };
+    pagesList.push(titleAboveMaxValuePage2);
 
     //Content
     const contentMinValuePage = {
@@ -53,7 +68,7 @@ class CreatePageAleatoryBoundariesData {
     const contentBelowMinValuePage = {
       scenarioName: "Content below minimum (empty)",
       title: faker.random.alphaNumeric(100),
-      content: "",
+      content: " ",
     };
     pagesList.push(contentMinValuePage);
 

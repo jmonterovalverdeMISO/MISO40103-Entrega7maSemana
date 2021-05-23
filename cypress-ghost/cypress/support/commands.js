@@ -18,5 +18,5 @@ Cypress.Commands.add('login', () => {
 
 Cypress.Commands.add('logout', () => {
   cy.visit('/ghost/#/signout')
-  cy.wait(500)
+  cy.wait(5000)
 })

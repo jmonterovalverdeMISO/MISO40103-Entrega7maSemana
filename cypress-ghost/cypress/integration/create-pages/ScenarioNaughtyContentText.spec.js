@@ -5,7 +5,7 @@ import PagesListPage from "../pageObjects/PagesListPage";
 import CreatePageAprioriData from "../data-pool/a-priori-page-data";
 
 CreatePageAprioriData.getPageNaughtyContentData().forEach((page) => {
-  context("Create draft page with Text in the title that may break the page #" + page.id, () => {
+  context("Create draft page with Text in the content that may break the page #" + page.id, () => {
     before(() => {
       cy.login();
     });
@@ -49,6 +49,11 @@ CreatePageAprioriData.getPageNaughtyContentData().forEach((page) => {
       PagesPage.getContentField().type(page.content,  { parseSpecialCharSequences: false });
 
       PagesPage.getBackToPagesPageButton().click();
+      cy.wait(1000);
+      if(page.title.length > 255)
+      {
+        PagesPage.getLeaveButton().click();
+      }
       PagesListPage.getLastDraftPageTitle().should(
         "contain.text",
         page.title

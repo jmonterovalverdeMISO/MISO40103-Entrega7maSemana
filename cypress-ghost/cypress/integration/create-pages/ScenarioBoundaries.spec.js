@@ -49,6 +49,11 @@ CreatePageAleatoryBoundariesData.getBoundariesTestData().forEach((page) => {
       PagesPage.getContentField().type(page.content, { parseSpecialCharSequences: false });
       PagesPage.getHeaderStatusLabel().click();
       PagesPage.getBackToPagesPageButton().click();
+      cy.wait(1000);
+      if(page.title.length > 255)
+      {
+        PagesPage.getLeaveButton().click();
+      }
       cy.wait(3000);
       PagesListPage.getLastDraftPageTitle().should(
         "contain.text",

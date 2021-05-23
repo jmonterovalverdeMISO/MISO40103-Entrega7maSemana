@@ -1,6 +1,11 @@
 /// <reference types="cypress" />
 
 class PagesPage {
+
+  static getLeaveButton() {
+    return cy.get(".gh-btn.gh-btn-red");
+  }
+
   static getNewPageButton() {
     return cy.get('.view-actions a[href="#/editor/page/"]');
   }
