@@ -15,10 +15,6 @@ pagesList.forEach((page) => {
       Cypress.Cookies.preserveOnce("ghost-admin-api-session");
     });
 
-    afterEach(() => {
-      cy.screenshot();
-    });
-
     after(() => {
       cy.logout();
     });
