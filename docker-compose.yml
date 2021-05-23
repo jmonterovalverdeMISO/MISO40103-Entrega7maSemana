@@ -32,6 +32,7 @@ services:
       CYPRESS_GHOST_USER: user@test.com
       CYPRESS_GHOST_PASS: dev1234567
     working_dir: /e2e
+    entrypoint: ["/bin/sh", "-c", "npm install && cypress run"]
     volumes:
       - ./cypress-ghost:/e2e:rw
     depends_on: 

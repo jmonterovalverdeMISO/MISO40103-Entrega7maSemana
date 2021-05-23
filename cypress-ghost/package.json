@@ -16,13 +16,11 @@
   "license": "ISC",
   "devDependencies": {
     "cypress": "^7.3.0",
+    "faker": "^5.5.3",
     "eslint": "^7.25.0",
     "eslint-plugin-chai-friendly": "^0.6.0",
     "eslint-plugin-cypress": "^2.11.3",
-    "eslint-plugin-import": "^2.22.1"
-  },
-  "dependencies": {
-    "faker": "^5.5.3",
+    "eslint-plugin-import": "^2.22.1",
     "node-fetch": "^2.6.1"
   }
 }
