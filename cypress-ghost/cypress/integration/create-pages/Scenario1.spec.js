@@ -2,8 +2,9 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
-
+import faker from 'faker';
 context("Create draft page", () => {
+  var faker = require('faker');
   before(() => {
     cy.login();
   });
@@ -33,16 +34,18 @@ context("Create draft page", () => {
     PagesListPage.getLastDraftPageTitle().should("contain.text", "(Untitled)");
   });
 
+  const titlePage = faker.internet.domainName;
   it("should fill inputs and update information page", () => {
     PagesListPage.getLastDraftPageTitle().click({ force: true });
-
-    PagesPage.getTitleField().clear().type("Test page #1");
-    PagesPage.getContentField().type("Test content #1");
+    PagesPage.getTitleField().clear().type(titlePage);
+    PagesPage.getContentField().type(faker.lorem.words);
+    //PagesPage.getTitleField().clear().type("Test page #1");
+    //PagesPage.getContentField().type("Test content #1");
 
     PagesPage.getBackToPagesPageButton().click();
     PagesListPage.getLastDraftPageTitle().should(
       "contain.text",
-      "Test page #1"
+      titlePage
     );
   });
 });
