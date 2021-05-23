@@ -8,6 +8,15 @@ CreatePageAprioriData.getPageNaughtyTitleData().forEach((page) => {
   context("Create draft page with Text in the title that may break the page #" + page.id, () => {
     before(() => {
       cy.login();
+      //Cypress can't type null
+      if(page.title === null)
+      {
+        page.title = ' ';
+      }
+      if(page.content === null)
+      {
+        page.content = ' ';
+      }
     });
 
     beforeEach(() => {
@@ -50,7 +59,7 @@ CreatePageAprioriData.getPageNaughtyTitleData().forEach((page) => {
       
       PagesPage.getBackToPagesPageButton().click();
       cy.wait(1000);
-      if(page.title.length > 255)
+      if(page.title !== null && page.title !== undefined && page.title.length > 255)
       {
         PagesPage.getLeaveButton().click();
       }
