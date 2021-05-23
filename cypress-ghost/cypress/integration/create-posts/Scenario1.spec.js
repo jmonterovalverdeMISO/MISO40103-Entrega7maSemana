@@ -2,8 +2,8 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PostsPage from "../pageObjects/PostsPage";
 import PostListPage from "../pageObjects/PostListPage";
-
 context("Create draft post", () => {
+  var faker = require('faker');
   before(() => {
     cy.login();
   });
@@ -32,12 +32,13 @@ context("Create draft post", () => {
   });
 
   it("should fill inputs and update information page", () => {
+    const tit = faker.lorem.words(3);
     PostListPage.getLastDraftPostTitle().click({ force: true });
 
-    PostsPage.getTitleField().clear().type("Test page #1");
-    PostsPage.getContentField().type("Test content #1");
+    PostsPage.getTitleField().clear().type(tit);
+    PostsPage.getContentField().type(faker.lorem.words(20));
 
     PostsPage.getBackToPostsPageButton().click();
-    PostListPage.getLastDraftPostTitle().should("contain.text", "Test page #1");
+    PostListPage.getLastDraftPostTitle().should("contain.text", tit);
   });
 });
