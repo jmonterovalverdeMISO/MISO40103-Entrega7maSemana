@@ -23,7 +23,7 @@ class CreatePageAleatoryBoundariesData {
       title: "",
       content: faker.random.alphaNumeric(100),
     };
-    pagesList.push(titleMinValuePage);
+    pagesList.push(titlebelowMinValuePage);
 
     //Title
     const titlemaxValuePage = {
