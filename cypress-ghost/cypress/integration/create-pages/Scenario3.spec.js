@@ -11,10 +11,6 @@ context("Create scheduled page", () => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
 
-  afterEach(() => {
-    cy.screenshot();
-  });
-
   it("should navigate to /pages from home", () => {
     MenuPage.getPagesLink().click();
     cy.url().should("include", "ghost/#/pages");

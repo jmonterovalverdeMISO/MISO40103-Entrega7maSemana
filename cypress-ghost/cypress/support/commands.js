@@ -1,5 +1,4 @@
 import LoginPage from "../integration/pageObjects/LoginPage";
-import MenuPage from "../integration/pageObjects/MenuPage";
 
 Cypress.Commands.add('login', () => {
   const user = Cypress.env('GHOST_USER') || 'user@test.com';

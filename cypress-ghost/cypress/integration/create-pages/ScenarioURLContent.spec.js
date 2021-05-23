@@ -1,9 +1,11 @@
 /// <reference types='cypress' />
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
-import CreatePageAleatoryBoundariesData from "../data-pool/aleatory-page.data";
+import DataPool from "../../data-pool";
 
-CreatePageAleatoryBoundariesData.getURLContentData().forEach((page) => {
+const dataPool = new DataPool();
+
+dataPool.random.getURLContentData().forEach((page) => {
   context("Create scheduled page for " + page.scenarioName, () => {
     before(() => {
       cy.login();
@@ -11,10 +13,6 @@ CreatePageAleatoryBoundariesData.getURLContentData().forEach((page) => {
 
     beforeEach(() => {
       Cypress.Cookies.preserveOnce("ghost-admin-api-session");
-    });
-
-    afterEach(() => {
-      cy.screenshot();
     });
 
     after(() => {

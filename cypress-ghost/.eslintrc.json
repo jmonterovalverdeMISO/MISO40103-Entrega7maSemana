@@ -1,6 +1,7 @@
 {
     "env": {
-        "browser": true
+        "node": true,
+        "es2020": true
     },
     "extends": [
         "eslint:recommended",
@@ -8,7 +9,6 @@
         "plugin:chai-friendly/recommended"
     ],
     "parserOptions": {
-        "ecmaVersion": 6,
-        "sourceType": "module"
+        "ecmaVersion": 11
     }
 }

@@ -22,9 +22,7 @@ context("Edit published post title", () => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
 
-  afterEach(() => {
-    cy.screenshot();
-  });
+
 
   it("should navigate to /posts from home", () => {
     cy.wait(3000);

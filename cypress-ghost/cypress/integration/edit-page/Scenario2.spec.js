@@ -18,9 +18,7 @@ context("Edit draft page", () => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
 
-  afterEach(() => {
-    cy.screenshot();
-  });
+
 
   it("should navigate to /pages from home", () => {
     cy.wait(3000);

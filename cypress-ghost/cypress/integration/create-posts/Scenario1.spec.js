@@ -12,9 +12,7 @@ context("Create draft post", () => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
 
-  afterEach(() => {
-    cy.screenshot();
-  });
+
 
   it("should navigate to /posts from home", () => {
     MenuPage.getPostsLink().click();

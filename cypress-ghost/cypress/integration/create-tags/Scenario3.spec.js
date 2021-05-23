@@ -13,9 +13,7 @@ context("Error creating Internal tag without name", () => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
 
-  afterEach(() => {
-    cy.screenshot();
-  });
+
 
   it("should navigate to /tags by clicking menu button", () => {
     MenuPage.getTagsLink().click();

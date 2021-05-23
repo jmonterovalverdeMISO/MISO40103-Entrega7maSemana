@@ -2,9 +2,11 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
-import CreatePageAprioriData from "../data-pool/a-priori-page-data";
+import DataPool from "../../data-pool";
 
-CreatePageAprioriData.getPageLongContentTextData().forEach((page) => {
+const dataPool = new DataPool();
+
+dataPool.apriori.getPageLongContentTextData().forEach((page) => {
   context("Create draft page with Long Content #" + page.id, () => {
     before(() => {
       cy.login();
@@ -12,10 +14,6 @@ CreatePageAprioriData.getPageLongContentTextData().forEach((page) => {
 
     beforeEach(() => {
       Cypress.Cookies.preserveOnce("ghost-admin-api-session");
-    });
-
-    afterEach(() => {
-      cy.screenshot();
     });
 
     after(() => {

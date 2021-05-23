@@ -12,9 +12,37 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+const fs = require('fs');
+const Mockaroo = require('./Mockaroo');
+
+const mockaroo = new Mockaroo();
+
+const SCHEMAS = [
+    'tags',
+    'tags-dirty'
+];
+
 /**
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
 module.exports = (on, config) => {
+    on('before:run', () => {
+        return Promise.all(SCHEMAS.map(async (schema) => {
+            const response = await mockaroo.generateFromSchema(schema, 10);
+    
+            const poolPath = `./cypress/data-pool/dynamic/schemas/${schema}.json`;
+            const poolFile = fs.existsSync(poolPath);
+   
+            if (poolFile) {
+                const pool = JSON.parse(fs.readFileSync(poolPath));
+                
+                const newPool = JSON.stringify([...pool, ...response]);
+    
+                fs.writeFileSync(poolPath, newPool);
+            } else {            
+                fs.writeFileSync(poolPath, JSON.stringify(response));
+            }
+        }));
+    });   
 }

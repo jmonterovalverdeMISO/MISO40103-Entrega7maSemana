@@ -1,12 +1,12 @@
-/// <reference types='cypress' />
+import faker from 'faker';
 
-const faker = require("faker");
-class CreatePageAleatoryBoundariesData {
-  //static generator = faker();
+class RandomPool {
+  constructor() {
+    faker.seed(Date.now());
+  }
 
-  static getBoundariesTestData() {
+  getBoundariesTestData() {
     let pagesList = [];
-    faker.seed(0);
 
     //Title
     const titleMinValuePage = {
@@ -84,10 +84,8 @@ class CreatePageAleatoryBoundariesData {
     return pagesList;
   }
 
-  static getURLContentData() {
+  getURLContentData() {
     let pagesList = [];
-    faker.seed(0);
-    console.log(faker);
 
     //Content
     const contentURLTest = {
@@ -117,4 +115,4 @@ class CreatePageAleatoryBoundariesData {
   }
 
 }
-export default CreatePageAleatoryBoundariesData;
+export default RandomPool;

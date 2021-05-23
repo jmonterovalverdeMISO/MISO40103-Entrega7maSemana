@@ -2,9 +2,11 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
-import CreatePageAleatoryBoundariesData from "../data-pool/aleatory-page.data";
+import DataPool from "../../data-pool";
 
-CreatePageAleatoryBoundariesData.getBoundariesTestData().forEach((page) => {
+const dataPool = new DataPool();
+
+dataPool.random.getBoundariesTestData().forEach((page) => {
   context("Create draft to validate: " + page.scenarioName, () => {
     before(() => {
       cy.login();
@@ -12,10 +14,6 @@ CreatePageAleatoryBoundariesData.getBoundariesTestData().forEach((page) => {
 
     beforeEach(() => {
       Cypress.Cookies.preserveOnce("ghost-admin-api-session");
-    });
-
-    afterEach(() => {
-      cy.screenshot();
     });
 
     after(() => {

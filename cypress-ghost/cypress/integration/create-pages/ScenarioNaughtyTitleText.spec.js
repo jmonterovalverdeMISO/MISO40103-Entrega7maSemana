@@ -2,9 +2,11 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
-import CreatePageAprioriData from "../data-pool/a-priori-page-data";
+import DataPool from "../../data-pool";
 
-CreatePageAprioriData.getPageNaughtyTitleData().forEach((page) => {
+const dataPool = new DataPool();
+
+dataPool.apriori.getPageNaughtyTitleData().forEach((page) => {
   context("Create draft page with Text in the title that may break the page #" + page.id, () => {
     before(() => {
       cy.login();
@@ -21,10 +23,6 @@ CreatePageAprioriData.getPageNaughtyTitleData().forEach((page) => {
 
     beforeEach(() => {
       Cypress.Cookies.preserveOnce("ghost-admin-api-session");
-    });
-
-    afterEach(() => {
-      cy.screenshot();
     });
 
     after(() => {
