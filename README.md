@@ -5,8 +5,8 @@ Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las 
 ### Pruebas realizadas
 Las pruebas realizadas se encuentran desarrolladas en cypress. Para la ejecución de estas pruebas se usaron 3 tipos de pool de datos:
 1. Pool de datos a-priori: usando Mockaroo se generaron archivos json que cubren diferentes escenarios (link a los mismos en secciones posteriores)
-2. Pool de datos (pseudo) aleatorio dinámico: 
-3. Pool de datos aleatorio: se generan en cada corrida datos aleatoreos usando Faker.
+2. Pool de datos (pseudo) aleatorio dinámico: usando el api de Mockaroo realizamos una solicitud para generar nuevas tuplas de datos cada vez que se corren la suite de pruebas, estas nuevas tuplas se concatenan en su archivo `.json` correspondiente, simultaneamente el suite de prueba escoge tuplas del data pool aleatoriamente de esta forma, durante cada ejecución el suite va generando y utilizando datos nuevos. 
+3. Pool de datos aleatorio: se realizo una interface que implementa Faker.js para generar datos en aleatoriamente de forma que los metodos siempre retornaran un valor diferente siempre que sea llamado en cada corrida.
 
 ## Integrantes
 1. Carlos Garcia - cj.garcias1@uniandes.edu.co
