@@ -15,6 +15,10 @@ context("Create tag color input", () => {
   });
 
   dataPool.dynamic.getTags(25).forEach((tag) => {
+    if (!tag.color) {
+      return;
+    }
+
     context(`when a valid ${tag.color} is provided`, () => {
       it('should show color in preview box', () => {
         const input = TagPage.getColorInput();
@@ -29,6 +33,10 @@ context("Create tag color input", () => {
   });
 
   dataPool.dynamic.getDirtyTags(25).forEach((tag) => {
+    if (!tag.color) {
+      return;
+    }
+
     context(`when an invalid ${tag.color} is provided`, () => {
       it('should show an error message', () => {
         const input = TagPage.getColorInput();

@@ -1,6 +1,7 @@
 /// <reference types='cypress' />
 import MenuPage from "../pageObjects/MenuPage";
 import PostsPage from "../pageObjects/PostsPage";
+import PostListPage from "../pageObjects/PostListPage";
 import DataPool from "../../data-pool";
 
 const dataPool = new DataPool();

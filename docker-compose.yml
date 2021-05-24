@@ -24,19 +24,19 @@ services:
     networks:
       - ghost_dev
 
-  cypress:
-    container_name: cypress-chrome
-    image: cypress/included:7.3.0
-    environment:
-      CYPRESS_GHOST_3_42_5: http://ghost_3_42_5:3002
-      CYPRESS_GHOST_USER: user@test.com
-      CYPRESS_GHOST_PASS: dev1234567
-    working_dir: /e2e
-    entrypoint: ["/bin/sh", "-c", "npm install && cypress run"]
-    volumes:
-      - ./cypress-ghost:/e2e:rw
-    depends_on: 
-      ghost_3_42_5:
-        condition: service_healthy
-    networks:
-      - ghost_dev
+  # cypress:
+  #   container_name: cypress-chrome
+  #   image: cypress/included:7.3.0
+  #   environment:
+  #     CYPRESS_GHOST_3_42_5: http://ghost_3_42_5:3002
+  #     CYPRESS_GHOST_USER: user@test.com
+  #     CYPRESS_GHOST_PASS: dev1234567
+  #   working_dir: /e2e
+  #   entrypoint: ["/bin/sh", "-c", "npm install && cypress run"]
+  #   volumes:
+  #     - ./cypress-ghost:/e2e:rw
+  #   depends_on: 
+  #     ghost_3_42_5:
+  #       condition: service_healthy
+  #   networks:
+  #     - ghost_dev

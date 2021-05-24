@@ -47,18 +47,18 @@ dataPool.apriori.getPostTimesDiffFormat().forEach((post) => {
     });
 
     it("should open publish dialog when publish button is clicked", () => {
-        PostsPage.getPublishTrigger().click();
+      PostsPage.getPublishTrigger().click();
+  
+      PostsPage.getPublishMenu().should("be.visible");
+    });
     
-        PostsPage.getPublishMenu().should("be.visible");
-      });
-    
-      it("should schedule post", () => {
-        PostsPage.getPublishLaterOption().click();
-        cy.get('.gh-date-time-picker-time > input').first().click().clear().type(post.datePublish);
-        cy.wait(300);
-        PostsPage.getPublishButton().click();
-        cy.wait(500);
+    it("should schedule post", () => {
+      PostsPage.getPublishLaterOption().click();
+      cy.get('.gh-date-time-picker-time > input').first().click().clear().type(post.datePublish);
+      cy.wait(300);
+      PostsPage.getPublishButton().click();
+      cy.wait(500);
 
-      });
+    });
   });
 });
