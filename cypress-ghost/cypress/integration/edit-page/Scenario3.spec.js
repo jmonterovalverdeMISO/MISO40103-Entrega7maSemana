@@ -27,11 +27,15 @@ context("Edit published page title", () => {
   it("should navigate to /pages from home", () => {
     cy.wait(3000);
     MenuPage.getPagesLink().click();
+    cy.wait(3000);
     cy.url().should("include", "ghost/#/pages");
   });
 
   it("should navigate to last published page", () => {
+    PagesListPage.getPageListDropDown().click({ force: true });
+    PagesListPage.getPublishPageListMenu().click({ force: true });
     PagesListPage.getLastPublishedPostTitle().click({ force: true });
+    cy.wait(3000);
     cy.url().should("include", "ghost/#/editor/page");
   });
 

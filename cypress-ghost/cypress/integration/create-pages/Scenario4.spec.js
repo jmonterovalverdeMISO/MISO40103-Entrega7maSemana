@@ -18,6 +18,7 @@ context("Delete draft page", () => {
 
   it("should navigate to page editor by clicking new page button", () => {
     PagesPage.getNewPageButton().click();
+    cy.wait(3000);
     cy.url().should("include", "ghost/#/editor/page");
   });
 

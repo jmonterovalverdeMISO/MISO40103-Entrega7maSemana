@@ -1,6 +1,22 @@
 /// <reference types='cypress' />
 
 class PagesListPage {
+
+  static getPageListDropDown(){
+    return cy
+    .get('span:contains("All pages")')
+    .first()
+    .parent();
+    
+  }
+
+  static getPublishPageListMenu(){
+    return cy
+    .get('.ember-power-select-option[data-option-index="2"]')
+    .first();
+    
+  }
+
   static getLastPageLink() {
     return cy
       .get("a:visible.ember-view.permalink.gh-list-data.gh-post-list-title")

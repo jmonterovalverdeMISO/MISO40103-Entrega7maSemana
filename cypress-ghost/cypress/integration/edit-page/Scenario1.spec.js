@@ -31,7 +31,10 @@ context("Edit published page", () => {
   });
 
   it("should navigate to last published page", () => {
+    PagesListPage.getPageListDropDown().click({ force: true });
+    PagesListPage.getPublishPageListMenu().click({ force: true });
     PagesListPage.getLastPublishedPostTitle().click({ force: true });
+    cy.wait(3000);
     cy.url().should("include", "ghost/#/editor/page");
   });
 

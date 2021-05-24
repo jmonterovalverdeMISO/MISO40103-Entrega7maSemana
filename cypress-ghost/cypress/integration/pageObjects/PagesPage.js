@@ -7,7 +7,7 @@ class PagesPage {
   }
 
   static getNewPageButton() {
-    return cy.get('.view-actions a[href="#/editor/page/"]');
+    return cy.get('.view-actions a[href="#/editor/page/"]').first();
   }
 
   static getTitleField() {
@@ -71,47 +71,47 @@ class PagesPage {
   }
 
   static getRecentlyUpdatedMenuOption() {
-    return cy.get('.ember-power-select-option[data-option-index="2"]');
+    return cy.get('.ember-power-select-option[data-option-index="2"]').first();
   }
 
   static getScheduledMenuOption() {
-    return cy.get('.ember-power-select-option[data-option-index="3"]');
+    return cy.get('.ember-power-select-option[data-option-index="3"]').first();
   }
 
   static getAddCardButton() {
     return cy.get(
       "button.koenig-plus-menu-button.flex.justify-center.items-center.relative.w9.h9.ba.b--midlightgrey-l2.bg-white.br-100.anim-normal"
-    );
+    ).first();
   }
 
   static getBookmarkOption() {
     return cy.get(
       'div:contains("Bookmark").f-supersmall.tracked-1.fw3.ma0.mt1'
-    );
+    ).first();
   }
 
   static getPostSettingsButton() {
-    return cy.get(".post-settings");
+    return cy.get(".post-settings").first();
   }
   
   static getSettingsMenu() {
-    return cy.get(".settings-menu");
+    return cy.get(".settings-menu").first();
   }
 
   static getDeleteDialog() {
-    return cy.get(".fullscreen-modal");
+    return cy.get(".fullscreen-modal").first();
   }
 
   static getDeleteButtonPage() {
-    return cy.get(".settings-menu .settings-menu-delete-button");
+    return cy.get(".settings-menu .settings-menu-delete-button").first();
   }
 
   static getAcceptDeleteButtonPage() {
-    return cy.get(".gh-btn.gh-btn-red.gh-btn-icon.ember-view");
+    return cy.get(".gh-btn.gh-btn-red.gh-btn-icon.ember-view").first();
   }
 
   static getCloseSettingsButton() {
-    return cy.get(".close.settings-menu-header-action");
+    return cy.get(".close.settings-menu-header-action").first();
   }
 }
 export default PagesPage;
