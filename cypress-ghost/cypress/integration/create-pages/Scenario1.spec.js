@@ -2,6 +2,7 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
+import faker from 'faker';
 
 context("Create draft page", () => {
   before(() => {
@@ -30,15 +31,16 @@ context("Create draft page", () => {
   });
 
   it("should fill inputs and update information page", () => {
-    PagesListPage.getLastDraftPageTitle().click({ force: true });
+    const titlePage = faker.internet.domainName();
 
-    PagesPage.getTitleField().clear().type("Test page #1");
-    PagesPage.getContentField().type("Test content #1");
+    PagesListPage.getLastDraftPageTitle().click({ force: true });
+    PagesPage.getTitleField().clear().type(titlePage);
+    PagesPage.getContentField().type(faker.lorem.words());
 
     PagesPage.getBackToPagesPageButton().click();
     PagesListPage.getLastDraftPageTitle().should(
       "contain.text",
-      "Test page #1"
+      titlePage
     );
   });
 });

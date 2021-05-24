@@ -2,6 +2,7 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PostsPage from "../pageObjects/PostsPage";
 import PostListPage from "../pageObjects/PostListPage";
+import faker from 'faker';
 
 context("Create draft post", () => {
   before(() => {
@@ -11,8 +12,6 @@ context("Create draft post", () => {
   beforeEach(() => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
-
-
 
   it("should navigate to /posts from home", () => {
     MenuPage.getPostsLink().click();
@@ -32,12 +31,13 @@ context("Create draft post", () => {
   });
 
   it("should fill inputs and update information page", () => {
+    const tit = faker.lorem.words(3);
     PostListPage.getLastDraftPostTitle().click({ force: true });
 
-    PostsPage.getTitleField().clear().type("Test page #1");
-    PostsPage.getContentField().type("Test content #1");
+    PostsPage.getTitleField().clear().type(tit);
+    PostsPage.getContentField().type(faker.lorem.words(20));
 
     PostsPage.getBackToPostsPageButton().click();
-    PostListPage.getLastDraftPostTitle().should("contain.text", "Test page #1");
+    PostListPage.getLastDraftPostTitle().should("contain.text", tit);
   });
 });

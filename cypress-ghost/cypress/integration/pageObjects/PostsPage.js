@@ -17,6 +17,10 @@ class PostsPage {
     return cy.get(".koenig-editor__editor");
   }
 
+  static getPostUnformattedContentField() {
+    return cy.get(".koenig-editor__editor.__mobiledoc-editor.__has-no-content");
+  }
+
   static getHearderStatusLabel() {
     return cy.get(
       ".flex.items-center.pl4.pr4.f8.nudge-left--1.h9.br2.br--right.bg-white>span>div"
@@ -39,12 +43,17 @@ class PostsPage {
     );
   }
 
+  //
+  static getBackToPostsPageButtonLongText() {
+    return cy.get('.gh-btn-red > span').contains('Leave');
+  }
+
   static getPublishTrigger() {
     return cy.get(".gh-publishmenu-trigger");
   }
 
   static getPublishMenu() {
-    return cy.get(".gh-publishmenu-dropdown");
+    return cy.get(".gh-publishmenu-trigger");
   }
 
   static getSetItLiveOption() {
@@ -84,17 +93,17 @@ class PostsPage {
   }
 
   static getAddCardButton() {
-    return cy.get(
-      "button.koenig-plus-menu-button.flex.justify-center.items-center.relative.w9.h9.ba.b--midlightgrey-l2.bg-white.br-100.anim-normal"
-    );
+    return cy.get('.koenig-plus-menu-button.flex.justify-center.items-center.relative.w9.h9.ba.b--midlightgrey-l2.bg-white.br-100.anim-normal');
   }
 
   static getCardMenu() {
-    return cy.get('.koenig-cardmenu');
+    return cy.get('.koenig-plus-menu-button')
   }
 
   static getBookmarkOption() {
-    return cy.get('.koenig-cardmenu div:contains("Bookmark").f8');
+    return cy.get(
+      'div:contains("Bookmark").f-supersmall.tracked-1.fw3.ma0.mt1'
+    );
   }
 
   static getBookmarkInput() {
