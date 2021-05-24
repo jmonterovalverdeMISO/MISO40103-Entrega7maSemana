@@ -3,7 +3,10 @@
 Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/).
 <br/>
 ### Pruebas realizadas
-Las pruebas realizadas se encuentran desarrolladas en cypress. Más adelante se encuentra un link a los escenarios.
+Las pruebas realizadas se encuentran desarrolladas en cypress. Para la ejecución de estas pruebas se usaron 3 tipos de pool de datos:
+1. Pool de datos a-priori: usando Mockaroo se generaron archivos json que cubren diferentes escenarios (link a los mismos en secciones posteriores)
+2. Pool de datos (pseudo) aleatorio dinámico: 
+3. Pool de datos aleatorio: se generan en cada corrida datos aleatoreos usando Faker.
 
 ## Integrantes
 1. Carlos Garcia - cj.garcias1@uniandes.edu.co
