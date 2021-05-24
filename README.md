@@ -46,7 +46,6 @@ AGREGAR IMAGEN DOCKER
 Para visualizar el progreso de un contenedor puedes ejecutar los siguientes comandos en una consola:
 Notas: 
 - La composición y la ejecución de los escenarios tarda un tiempo dependiendo de la capacidad de su máquina local, por lo que si en el primer intento no le salen logs, dele unos segundos más para que el componente se ejecute
-- La ejecución de VRT debe esperar a que cypress haya finalizado las pruebas, si se revisa la carpeta antes es probable que no vea resultados
 
 1. Cypress `docker logs cypress-chrome`
 2. Ghost `docker logs ghost`
