@@ -3,8 +3,8 @@ import MenuPage from "../pageObjects/MenuPage";
 import PagesPage from "../pageObjects/PagesPage";
 import PagesListPage from "../pageObjects/PagesListPage";
 import faker from 'faker';
+
 context("Create draft page", () => {
-  var faker = require('faker');
   before(() => {
     cy.login();
   });

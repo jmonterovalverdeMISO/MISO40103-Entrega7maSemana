@@ -2,8 +2,9 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PostsPage from "../pageObjects/PostsPage";
 import PostListPage from "../pageObjects/PostListPage";
+import faker from 'faker';
+
 context("Create draft post", () => {
-  var faker = require('faker');
   before(() => {
     cy.login();
   });
@@ -11,8 +12,6 @@ context("Create draft post", () => {
   beforeEach(() => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
-
-
 
   it("should navigate to /posts from home", () => {
     MenuPage.getPostsLink().click();

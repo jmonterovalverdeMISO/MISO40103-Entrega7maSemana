@@ -11,8 +11,6 @@ context("Create scheduled post", () => {
     Cypress.Cookies.preserveOnce("ghost-admin-api-session");
   });
 
-
-
   it("should navigate to /posts from home", () => {
     MenuPage.getPostsLink().click();
     cy.url().should("include", "ghost/#/posts");

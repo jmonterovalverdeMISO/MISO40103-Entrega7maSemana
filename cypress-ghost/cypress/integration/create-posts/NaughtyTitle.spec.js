@@ -2,10 +2,11 @@
 import MenuPage from "../pageObjects/MenuPage";
 import PostsPage from "../pageObjects/PostsPage";
 import PostListPage from "../pageObjects/PostListPage";
+import DataPool from "../../data-pool";
 
-const postList = require("../../fixtures/create-posts/Mokaroo-Post-NaughtyContent.json");
+const dataPool = new DataPool();
 
-postList.forEach((post) => {
+dataPool.apriori.getPostNaughtyTitle().forEach((post) => {
   context("Create draft post with content with text naughty #" + post.id, () => {
     before(() => {
       cy.login();

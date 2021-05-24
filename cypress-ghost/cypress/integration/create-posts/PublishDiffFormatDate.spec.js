@@ -1,11 +1,11 @@
 /// <reference types='cypress' />
 import MenuPage from "../pageObjects/MenuPage";
 import PostsPage from "../pageObjects/PostsPage";
-import PostListPage from "../pageObjects/PostListPage";
+import DataPool from "../../data-pool";
 
-const postList = require("../../fixtures/create-posts/Mokaroo-Post-DatesDiffFormat.json");
+const dataPool = new DataPool();
 
-postList.forEach((post) => {
+dataPool.apriori.getPostDatesDiffFormat().forEach((post) => {
   context("Create draft post with characters differents #" + post.id, () => {
     before(() => {
       cy.login();
