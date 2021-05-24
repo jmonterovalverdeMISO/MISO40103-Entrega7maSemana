@@ -2,11 +2,11 @@
 ## Ghost 
 Proyecto en el que se elabora una suite de pruebas e2e para Ghost CMS (para las versiones 3.3.0 y 3.42.5) utilizando como API de automatización [Cypress](https://www.cypress.io/).
 <br/>
-### Pruebas realizadas
+### Estrategia de generación de datos
 Las pruebas realizadas se encuentran desarrolladas en cypress. Para la ejecución de estas pruebas se usaron 3 tipos de pool de datos:
-1. Pool de datos a-priori: usando Mockaroo se generaron archivos json que cubren diferentes escenarios (link a los mismos en secciones posteriores)
-2. Pool de datos (pseudo) aleatorio dinámico: usando el api de Mockaroo realizamos una solicitud para generar nuevas tuplas de datos cada vez que se corren la suite de pruebas, estas nuevas tuplas se concatenan en su archivo `.json` correspondiente, simultaneamente el suite de prueba escoge tuplas del data pool aleatoriamente de esta forma, durante cada ejecución el suite va generando y utilizando datos nuevos. 
-3. Pool de datos aleatorio: se realizo una interface que implementa Faker.js para generar datos en aleatoriamente de forma que los metodos siempre retornaran un valor diferente siempre que sea llamado en cada corrida.
+1. **Pool de datos a-priori**: usando Mockaroo se generaron archivos `.json` que cubren diferentes escenarios (link a los mismos en secciones posteriores)
+2. **Pool de datos (pseudo) aleatorio dinámico**: usando el api de Mockaroo realizamos una solicitud para generar nuevas tuplas de datos cada vez que se corren la suite de pruebas, estas nuevas tuplas se concatenan en su archivo `.json` correspondiente, simultaneamente el suite de prueba escoge tuplas del data pool aleatoriamente de esta forma, durante cada ejecución el suite va generando y utilizando datos nuevos. 
+3. **Pool de datos aleatorio**: se realizo una interface que implementa Faker.js para generar datos en aleatoriamente de forma que los metodos siempre retornaran un valor diferente siempre que sea llamado en cada corrida.
 
 ## Integrantes
 1. Carlos Garcia - cj.garcias1@uniandes.edu.co
@@ -30,7 +30,7 @@ Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones 
 # Correr pruebas (Headless) :rocket:
 ## Pasos para despliegue
 1. Instalar [docker](https://www.docker.com/get-started) segun tu sistema operativo
-2. Clonar este repositorio en su máquina local. Si necesita ayuda puede consultar este (link)[https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository]
+2. Clonar este repositorio en su máquina local. Si necesita ayuda puede consultar este [link](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 3. Abrir una consola que esté ubicada sobre el folder del repositorio que clonó en el paso 2.
 4. Verificar que el servicio de docker está corriendo.
 5. Ejecutar `docker-compose build` en una consola para construir las imagenes de VRT, ghost, cypress y kraken. 
