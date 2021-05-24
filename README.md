@@ -30,7 +30,7 @@ Todas las funcionalidades tinen escenarios para ser probadas en ambas versiones 
 # Correr pruebas (Headless) :rocket:
 ## Pasos para despliegue
 1. Instalar [docker](https://www.docker.com/get-started) segun tu sistema operativo
-2. Clonar este repositorio en su máquina local. Si necesita ayuda puede consultar este (link)[https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository]
+2. Clonar este repositorio en su máquina local. Si necesita ayuda puede consultar este [link](https://docs.github.com/es/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 3. Abrir una consola que esté ubicada sobre el folder del repositorio que clonó en el paso 2.
 4. Verificar que el servicio de docker está corriendo.
 5. Ejecutar `docker-compose build` en una consola para construir las imagenes de VRT, ghost, cypress y kraken. 
