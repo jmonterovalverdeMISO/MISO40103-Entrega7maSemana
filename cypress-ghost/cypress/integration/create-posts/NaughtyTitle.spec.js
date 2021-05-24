@@ -40,8 +40,8 @@ dataPool.apriori.getPostNaughtyTitle().forEach((post) => {
     it("should fill inputs and update information page", () => {
       PostListPage.getLastDraftPostTitle().click({ force: true });
 
-      PostsPage.getTitleField().clear().type(post.title);
-      PostsPage.getContentField().type(post.content);
+      PostsPage.getTitleField().clear().type(post.title, { parseSpecialCharSequences: false });
+      PostsPage.getContentField().type(post.content, { parseSpecialCharSequences: false });
 
       PostsPage.getBackToPostsPageButton().click();
       PostListPage.getLastDraftPostTitle().should("contain.text", post.title);

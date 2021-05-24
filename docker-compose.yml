@@ -12,6 +12,8 @@ services:
       dockerfile: ./Dockerfile-ghost-3.42.5
     environment:
       spam__user_login__freeRetries: 1000
+      spam__private_block__freeRetries: 1000
+      spam__global_block__freeRetries: 1000
       server__port: 3002
       url: http://localhost:3002
       NODE_ENV: development
